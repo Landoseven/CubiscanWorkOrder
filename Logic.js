@@ -87,3 +87,7 @@ canvas.addEventListener('touchmove', (event) => {
 canvas.addEventListener('touchend', () => {
   isDrawing = false;
 });
+
+function printPage() {
+  window.print();
+}
