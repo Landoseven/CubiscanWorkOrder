@@ -6,7 +6,7 @@ canvas.width = 712;
 canvas.height = 90;
 
 const minCanvasWidth = 712;
-const maxCanvasWidth = 1327;
+const maxCanvasWidth = 1920;
 const minCanvasHeight = 90;
 const maxCanvasHeight = 100;
 
