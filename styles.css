@@ -159,6 +159,10 @@ header {
     font-size: 12pt;
   }
 
+  @page {
+    size: A4;
+  }
+
   .template { width: auto; left:0; top:0; }
   img { width:100%; }
   li { margin: 0 0 10px 20px !important;}
