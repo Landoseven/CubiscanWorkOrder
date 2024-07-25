@@ -151,4 +151,18 @@ header {
     -webkit-print-color-adjust: exact !important;   /* Chrome, Safari 6 – 15.3, Edge */                 /* Firefox 48 – 96 */
     print-color-adjust: exact !important;           /* Firefox 97+, Safari 15.4+ */
 }
-  
+
+  @media print {
+  * {padding: 50 !important; }
+  #controls, .footer, .footerarea{ display: none; }
+  html, body {
+    /*changing width to 100% causes huge overflow and wrap*/
+    overflow: hidden;
+    background: #FFF; 
+    font-size: 12pt;
+  }
+
+  .template { width: auto; left:0; top:0; }
+  img { width:100%; }
+  li { margin: 0 0 10px 20px !important;}
+}
