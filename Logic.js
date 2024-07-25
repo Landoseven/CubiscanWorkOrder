@@ -55,10 +55,6 @@ canvas.addEventListener('mouseup', () => {
   isDrawing = false;
 });
 
-clearButton.addEventListener('click', () => {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-});
-
 function drawLine(x1, y1) {
   ctx.beginPath();
   ctx.moveTo(x, y);
