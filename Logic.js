@@ -2,13 +2,15 @@ const canvas = document.getElementById('signature-pad');
 const ctx = canvas.getContext('2d');
 const clearButton = document.getElementById('clear');
 
+window.addEventListener('resize', resizeCanvas);
+
 canvas.width = 712; 
 canvas.height = 90;
 
-const minCanvasWidth = 712;
+const minCanvasWidth = 480;
 const maxCanvasWidth = 1920;
 const minCanvasHeight = 90;
-const maxCanvasHeight = 100;
+const maxCanvasHeight = 102;
 
 function resizeCanvas() {
   const canvasContainer = canvas.parentElement;
@@ -18,8 +20,6 @@ function resizeCanvas() {
   canvas.width = newWidth;
   canvas.height = newHeight;
 }
-
-window.addEventListener('resize', resizeCanvas);
 
 resizeCanvas();
 
