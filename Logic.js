@@ -115,7 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 'Multiple':
-        if (selectedService !== 'Maintenance/CCA') {
+        switch (selectedService) { 
+          default:
           tableContainer.appendChild(table1);
           tableContainer.style.display = 'block';
         }
@@ -139,6 +140,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         break;
 
+      case 'CS125':
+        switch (selectedService) {
+          case 'Select':
+            // No table shown
+            break;
+  
+          case 'Maintenance/CCA':
+            tableContainer.appendChild(table2);
+            tableContainer.style.display = 'block';
+            break;
+  
+          default:
+            tableContainer.appendChild(table1);
+            tableContainer.style.display = 'block';
+            break;
+        }
+        break;
+      case 'CS25':
+        switch (selectedService) {
+          case 'Select':
+            // No table shown
+            break;
+    
+          case 'Maintenance/CCA':
+            tableContainer.appendChild(table2);
+            tableContainer.style.display = 'block';
+            break;
+    
+          default:
+            tableContainer.appendChild(table1);
+            tableContainer.style.display = 'block';
+            break;
+        }
+        break;
       default:
         // No matching model; hide table
         break;
