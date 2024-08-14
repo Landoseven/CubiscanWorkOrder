@@ -115,6 +115,32 @@ document.addEventListener('DOMContentLoaded', () => {
           <option value="Select">Select</option>
         `;
         break;
+      case 'Multiple':
+        partsDropdown.innerHTML = `
+          <option value="Select">Select</option>
+          <option value="12780 QI Sensor">12780 QI Sensor</option>
+          <option value="15163 LDU Scale Card">15163 LDU Scale Card</option>
+          <option value="14090 CS25/325 DISPLAY/LCD ASY">14090 CS25/325 DISPLAY/LCD ASY</option>
+          <option value="14129 CS25/325 HDMI 2FT Cable">14129 CS25/325 HDMI 2FT Cable</option>
+          <option value="12844 CSx25 TX Board ">12844 CSx25 TX Board</option>
+          <option value="12841 CSx25 RX Board  ">12841 CSx25 RX Board</option>
+          <option value="13218 CSx25 PowerSupply">13218 CSx25 PowerSupply</option>
+          <option value="14062 CS1x0 T PowerSupply Brick">14062 CS1x0 T PowerSupply Brick</option>
+          <option value="13351 CSx25 1Amp Fuse">13351 CSx25 1Amp Fuse</option>
+          <option value="15030 CS125 Display">15030 CS125 Display</option>
+          <option value="15955 CS1x0 TOUCH Screen Display Asy">15955 CS1x0 TOUCH Screen Display Asy</option>
+          <option value="14100 CS25/325 Controller ASY">14100 CS25/325 Controller ASY</option>
+          <option value="14527 CS110 T Controller ASY">14527 CS110 T Controller ASY</option>
+          <option value="15380 CS110 XT Controller ASY">15380 CS110 XT Controller ASY</option>
+          <option value="14012 CS150 T Controller ASY">14012 CS150 T Controller ASY</option>
+          <option value="14005 CS100 T Controller ASY">14005 CS100 T Controller ASY</option>
+          <option value="14718 CS75 C PC/Combo Controller">14718 CS75 C PC/Combo Controller</option>
+          <option value="13210 CSx25 Motherboard">13210 CSx25 Motherboard</option>
+          <option value="14334 CS1x0 Motherboard">14334 CS1x0 Motherboard</option>
+          <option value="13476 CSx25/1x0 SDXC 32GB Memory Card">13476 CSx25/1x0 SDXC 32GB Memory Card</option>
+          <option value="13476 CSx25/1x0 SDXC 32GB Memory Card">13476 CSx25/1x0 SDXC 32GB Memory Card</option>
+        `;
+        break;
       case 'CS325':
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
@@ -161,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const columnIndex = Math.floor(partCount / 3) + 1;
 
       // If it's time to add a new column (every 4 items), adjust the grid
-      if (partCount % 4 === 0) {
+      if (partCount % 3 === 0) {
         partsUsedDiv.style.gridTemplateColumns = `repeat(${columnIndex}, 1fr)`;
       }
 
