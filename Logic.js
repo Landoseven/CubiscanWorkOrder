@@ -101,6 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const table3 = document.getElementById('table3Data');
   const table4 = document.getElementById('table4Data');
   const table5 = document.getElementById('table5Data');
+  const table6 = document.getElementById('table6Data');
+  const table7 = document.getElementById('table7Data');
 
   cubiscanModelDropdown.addEventListener('change', updateTable);
   servicePerformedDropdown.addEventListener('change', updateTable);
@@ -183,6 +185,25 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           break; 
 
+          
+        case 'S9':
+          switch (selectedService) {
+            case 'Select':
+              // No table shown
+              break;
+          
+            case 'Maintenance/CCA':
+              tableContainer.appendChild(table7);
+              tableContainer.style.display = 'block';
+              break;
+          
+            default:
+              tableContainer.appendChild(table1);
+              tableContainer.style.display = 'block';
+              break;
+          }
+          break;  
+
         case 'CS75':
         case 'CS75PRO':
           switch (selectedService) {
@@ -192,6 +213,28 @@ document.addEventListener('DOMContentLoaded', () => {
           
             case 'Maintenance/CCA':
               tableContainer.appendChild(table5);
+              tableContainer.style.display = 'block';
+              break;
+          
+            default:
+              tableContainer.appendChild(table1);
+              tableContainer.style.display = 'block';
+              break;
+          }
+          break;
+        
+        case 'CS200-TS':
+        case 'CS200-B':
+        case 'CS210':
+        case 'CS225':
+        case 'CS275':
+          switch (selectedService) {
+            case 'Select':
+              // No table shown
+              break;
+          
+            case 'Maintenance/CCA':
+              tableContainer.appendChild(table6);
               tableContainer.style.display = 'block';
               break;
           
