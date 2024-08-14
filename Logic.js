@@ -91,6 +91,90 @@ function printPage() {
   window.print();
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const cubiscanModelDropdown = document.getElementById('cubiscanmodel');
+  const partsDropdown = document.getElementById('partsDropdown');
+  const addPartButton = document.getElementById('addPartButton');
+  const partsUsedDiv = document.getElementById('textAreaParts');
+
+  let partCount = 0; // Counter to track the number of parts added
+
+  cubiscanModelDropdown.addEventListener('change', updatePartsDropdown);
+  addPartButton.addEventListener('click', addPart);
+    //addPart.preventDefault();  // Prevent form submission
+  // Function to update parts dropdown based on the selected Cubiscan model
+  function updatePartsDropdown() {
+    const selectedCubiscanModel = cubiscanModelDropdown.value;
+
+    // Clear the current dropdown options
+    partsDropdown.innerHTML = '';
+
+    switch (selectedCubiscanModel) {
+      case 'Select':
+        partsDropdown.innerHTML = `
+          <option value="Select">Select</option>
+        `;
+        break;
+      case 'CS325':
+        partsDropdown.innerHTML = `
+          <option value="Select">Select</option>
+          <option value="CS325 Part A">CS325 Part A</option>
+          <option value="CS325 Part B">CS325 Part B</option>
+          <option value="CS325 Part C">CS325 Part C</option>
+        `;
+        break;
+
+      case 'CS200':
+        partsDropdown.innerHTML = `
+          <option value="CS200 Part A">CS200 Part A</option>
+          <option value="CS200 Part B">CS200 Part B</option>
+          <option value="CS200 Part C">CS200 Part C</option>
+        `;
+        break;
+
+      case 'CS150':
+        partsDropdown.innerHTML = `
+          <option value="CS150 Part A">CS150 Part A</option>
+          <option value="CS150 Part B">CS150 Part B</option>
+          <option value="CS150 Part C">CS150 Part C</option>
+        `;
+        break;
+
+      default:
+        partsDropdown.innerHTML = `
+          <option value="Select">Select</option>
+        `;
+        break;
+    }
+  }
+
+  // Function to add selected part to the contenteditable div
+  function addPart() {
+    const selectedPart = partsDropdown.value;
+    if (selectedPart) {
+      // Create a new div for the part
+      const partDiv = document.createElement('div');
+      partDiv.textContent = selectedPart;
+      partDiv.style.marginBottom = '5px';
+
+      // Calculate the current column index
+      const columnIndex = Math.floor(partCount / 3) + 1;
+
+      // If it's time to add a new column (every 4 items), adjust the grid
+      if (partCount % 4 === 0) {
+        partsUsedDiv.style.gridTemplateColumns = `repeat(${columnIndex}, 1fr)`;
+      }
+
+      // Append the part to the appropriate column
+      partsUsedDiv.appendChild(partDiv);
+      
+      partCount++; // Increment the part count
+    }
+  }
+});
+
+
+
 //Change Table
 document.addEventListener('DOMContentLoaded', () => {
   const servicePerformedDropdown = document.getElementById('serviceperformed');

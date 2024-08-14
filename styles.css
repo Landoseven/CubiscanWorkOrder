@@ -98,9 +98,25 @@ input {
   margin-bottom: 10px;
 }
 
-#textarea {
+#textAreaParts {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Start with one column */
+  grid-row: 4;
+  grid-column: 1 / span 2;
   min-height: 48px;
-  max-height: 100px;
+  height: fit-content;
+  width: inherit; /* Make the textarea full width */
+  resize: vertical; /* Allow resizing only vertically*/
+  font-size: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+#textAreaNotes {
+  min-height: 48px;
+  height: auto;
   width: inherit; /* Make the textarea full width */
   resize: vertical; /* Allow resizing only vertically*/
   font-size: 14px;
@@ -109,6 +125,19 @@ input {
   border-radius: 4px;
   margin-bottom: 5px;
 }
+
+#textAreaSerial {
+  min-height: 48px;
+  height: auto;
+  width: inherit; /* Make the textarea full width */
+  resize: vertical; /* Allow resizing only vertically*/
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
 #table1Data {
   display: flex;
   flex-direction: column;
@@ -116,18 +145,44 @@ input {
 
 .parts-container {
   display: grid;
-  grid-template-rows: 20% 1fr;
+  grid-template-rows: 15% 28% 19%;
   grid-template-columns: 49% 49%;
   column-gap: 5px;
-}
-
-#partslabel {
-  grid-row: 1;
-  grid-column: 1;
+  margin-bottom: 7px;
 }
 
 #parts {
   grid-column: 1;
+  grid-row: 1;
+}
+
+
+#partsReturnDropdown {
+  grid-row: 2;
+  grid-column: 2;
+  height: 37px;
+  font-size: 14px;
+}
+
+#addPartButton {
+  display: grid;
+  grid-column: 1;
+  grid-row: 3;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: auto;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+#partsDropdown {
+  grid-column: 1;
+  grid-row: 2;
+  width: auto;
+  height: 37px;
 }
 
 #partsreturnlabel {

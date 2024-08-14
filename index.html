@@ -39,7 +39,7 @@
         <input type="customer site" id="customerSite" name="customer site">
 
         <label for="serial number">Serial Number</label>
-        <div contenteditable="true" id="textarea" name="serial number"></div>
+        <div contenteditable="true" id="textAreaSerial" name="serial number"></div>
 
         <label for="SRO">SRO</label>
         <input type="SRO" id="SRO" name="SRO">
@@ -294,17 +294,41 @@
     
     <!--Parts-->
     <div class="parts-container">
-      
-        <label for="partslabel" id="parts">Parts Used</label>
-        <div contenteditable="true" id="textarea" name="parts"></div>
-      
-        <label for="partsreturnlabel" id="partsreturnlabel">Parts Returned (Method)</label>
-        <div contenteditable="true" id="textarea" name="partsreturn"></div>
-      
+      <label for="partslabel" id="parts">Parts Used</label>
+    
+      <!-- Dropdown for selecting parts -->
+      <select id="partsDropdown">
+        <option value="Select">Select</option>
+        <option value="CS325 Part A">CS325 Part A</option>
+        <option value="CS325 Part B">CS325 Part B</option>
+        <option value="CS325 Part C">CS325 Part C</option>
+        <option value="CS200 Part A">CS200 Part A</option>
+        <option value="CS200 Part B">CS200 Part B</option>
+        <option value="CS200 Part C">CS200 Part C</option>
+        <option value="CS150 Part A">CS150 Part A</option>
+        <option value="CS150 Part B">CS150 Part B</option>
+        <option value="CS150 Part C">CS150 Part C</option>
+      </select>
+    
+      <!-- Add button -->
+      <button id="addPartButton" type="button">Add</button>
+    
+      <!-- Contenteditable div for parts used -->
+      <div contenteditable="true" id="textAreaParts" name="parts"></div>
+    
+      <label for="partsreturnlabel" id="partsreturnlabel">Parts Returned (Method)</label>
+      <select id="partsReturnDropdown">
+        <option value="Select">Select</option>
+        <option value="Carried with Tech">Carried with Tech</option>
+        <option value="FedEx Overnight">FedEx Overnight</option>
+        <option value="FedEx Ground">FedEx Ground</option>
+        <option value="FedEx Drop Off/Return Label">FedEx Drop Off/Return Label</option>
+      </select>
     </div>
+
     <!---->
     <label for="notes">Notes</label>
-    <div contenteditable="true" id="textarea" name="notes"></div>
+    <div contenteditable="true" id="textAreaNotes" name="notes"></div>
 
     <label for="site representative">Site Representative</label>
     <input type="site representative" id="siteRepresentative" name="site representative">
