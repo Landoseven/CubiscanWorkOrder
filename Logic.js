@@ -211,7 +211,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.getElementById("generate").onclick = function () {
 	// Your html2pdf code here.
+  const downloadButton = document.getElementById('generate');
 	var element = document.getElementById('pdfContent');
+
+  // Hide the download button
+  downloadButton.style.display = 'none';
 
   var opt = {
     filename:     'Work_Order.pdf',
@@ -220,7 +224,10 @@ document.getElementById("generate").onclick = function () {
     jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' },
     }
 
-  html2pdf().set(opt).from(element).save();
+  html2pdf().set(opt).from(element).save() .then(() => {
+    // Show the download button again after the PDF is generated
+    downloadButton.style.display = 'block';
+  });
 };
 
 /*document.getElementById('generate').addEventListener('click', function () {
