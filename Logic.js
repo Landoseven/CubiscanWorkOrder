@@ -98,48 +98,52 @@ document.addEventListener('DOMContentLoaded', () => {
   const tableContainer = document.getElementById('tableContainer');
   const table1 = document.getElementById('table1Data');
   const table2 = document.getElementById('table2Data');
-  
 
   cubiscanModelDropdown.addEventListener('change', updateTable);
   servicePerformedDropdown.addEventListener('change', updateTable);
 
-
   function updateTable() {
+    const selectedCubiscanModel = cubiscanModelDropdown.value;
+    const selectedService = servicePerformedDropdown.value;
 
-  const selectedCubiscanModel = cubiscanModelDropdown.value;
-  const selectedService = servicePerformedDropdown.value;
+    tableContainer.innerHTML = ''; // Clear previous content
+    tableContainer.style.display = 'none'; // Default to hide the table
 
-  tableContainer.innerHTML = ''; // Clear previous content
+    switch (selectedCubiscanModel) {
+      case 'Select':
+        // No table shown
+        break;
 
-    tableContainer.innerHTML = '';
-    if (selectedCubiscanModel === 'Select' && selectedService === 'Select') {
-      tableContainer.style.display = 'none';
-    }
+      case 'Multiple':
+        if (selectedService !== 'Maintenance/CCA') {
+          tableContainer.appendChild(table1);
+          tableContainer.style.display = 'block';
+        }
+        break;
 
-    if (selectedCubiscanModel === 'Multiple' && selectedService === 'Select') {
-      tableContainer.style.display = 'none';
-    }
-    else if (selectedCubiscanModel === 'Multiple' && selectedService !== 'Maintenance/CCA') {
-      tableContainer.appendChild(table1);
-      tableContainer.style.display = 'block';
-    }
+      case 'CS325':
+        switch (selectedService) {
+          case 'Select':
+            // No table shown
+            break;
 
-    if (selectedCubiscanModel === 'CS325' && selectedService === 'Select') {
-      tableContainer.style.display = 'none';
+          case 'Maintenance/CCA':
+            tableContainer.appendChild(table2);
+            tableContainer.style.display = 'block';
+            break;
+
+          default:
+            tableContainer.appendChild(table1);
+            tableContainer.style.display = 'block';
+            break;
+        }
+        break;
+
+      default:
+        // No matching model; hide table
+        break;
     }
-    else if (selectedCubiscanModel === 'CS325' && selectedService === 'Maintenance/CCA') {
-      tableContainer.appendChild(table2);
-      tableContainer.style.display = 'block';
-    }
-    else if (selectedCubiscanModel === 'CS325' && selectedService !== 'Maintenance/CCA') {
-      tableContainer.appendChild(table1);
-      tableContainer.style.display = 'block';
-    
-    }
-    else {
-      tableContainer.style.display = 'none';
-    }
-  };
+  }
 });
 // Print to PDF
 
