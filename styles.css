@@ -126,6 +126,18 @@ input {
   margin-bottom: 5px;
 }
 
+#textAreaSumm {
+  min-height: 48px;
+  height: auto;
+  width: inherit; /* Make the textarea full width */
+  resize: vertical; /* Allow resizing only vertically*/
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
 #textAreaSerial {
   min-height: 48px;
   height: auto;
