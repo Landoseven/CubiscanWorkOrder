@@ -39,7 +39,7 @@ header .logo {
 
 #myForm {
   display: grid;
-  grid-template-rows: 95%;
+  grid-template-rows: 0%;
   width: auto;
   height: 1025px;
   margin-top: 25px;
@@ -203,8 +203,7 @@ button {
   border-radius: 4px;
   cursor: pointer;
   width: auto;
-  margin-top: 10px;
-  grid-row: 2;
+  grid-row: 1;
 }
 
 

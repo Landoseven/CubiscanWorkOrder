@@ -98,6 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const tableContainer = document.getElementById('tableContainer');
   const table1 = document.getElementById('table1Data');
   const table2 = document.getElementById('table2Data');
+  const table3 = document.getElementById('table3Data');
+  const table4 = document.getElementById('table4Data');
+  const table5 = document.getElementById('table5Data');
 
   cubiscanModelDropdown.addEventListener('change', updateTable);
   servicePerformedDropdown.addEventListener('change', updateTable);
@@ -121,7 +124,8 @@ document.addEventListener('DOMContentLoaded', () => {
           tableContainer.style.display = 'block';
         }
         break;
-
+      case 'CS25':
+      case 'CS125':
       case 'CS325':
         switch (selectedService) {
           case 'Select':
@@ -140,40 +144,63 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         break;
 
-      case 'CS125':
-        switch (selectedService) {
-          case 'Select':
-            // No table shown
-            break;
-  
-          case 'Maintenance/CCA':
-            tableContainer.appendChild(table2);
-            tableContainer.style.display = 'block';
-            break;
-  
-          default:
-            tableContainer.appendChild(table1);
-            tableContainer.style.display = 'block';
-            break;
-        }
-        break;
-      case 'CS25':
-        switch (selectedService) {
-          case 'Select':
-            // No table shown
-            break;
-    
-          case 'Maintenance/CCA':
-            tableContainer.appendChild(table2);
-            tableContainer.style.display = 'block';
-            break;
-    
-          default:
-            tableContainer.appendChild(table1);
-            tableContainer.style.display = 'block';
-            break;
-        }
-        break;
+        case 'CS150':
+        case 'CS110':
+        case 'CS100':
+          switch (selectedService) {
+            case 'Select':
+              // No table shown
+              break;
+      
+            case 'Maintenance/CCA':
+              tableContainer.appendChild(table3);
+              tableContainer.style.display = 'block';
+              break;
+      
+            default:
+              tableContainer.appendChild(table1);
+              tableContainer.style.display = 'block';
+              break;
+          }
+          break;
+
+        case 'CS1100AKL':
+        case 'CS1200AKL':
+          switch (selectedService) {
+            case 'Select':
+              // No table shown
+              break;
+      
+            case 'Maintenance/CCA':
+              tableContainer.appendChild(table4);
+              tableContainer.style.display = 'block';
+              break;
+      
+            default:
+              tableContainer.appendChild(table1);
+              tableContainer.style.display = 'block';
+              break;
+          }
+          break; 
+
+        case 'CS75':
+        case 'CS75PRO':
+          switch (selectedService) {
+            case 'Select':
+              // No table shown
+              break;
+          
+            case 'Maintenance/CCA':
+              tableContainer.appendChild(table5);
+              tableContainer.style.display = 'block';
+              break;
+          
+            default:
+              tableContainer.appendChild(table1);
+              tableContainer.style.display = 'block';
+              break;
+          }
+          break;
       default:
         // No matching model; hide table
         break;
