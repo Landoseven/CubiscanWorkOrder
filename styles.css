@@ -39,7 +39,7 @@ header .logo {
 
 #myForm {
   display: grid;
-  grid-template-rows: 0%;
+  grid-template-rows: 5%;
   width: auto;
   height: 1025px;
   margin-top: 25px;
