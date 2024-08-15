@@ -94,6 +94,7 @@ function printPage() {
 document.addEventListener('DOMContentLoaded', () => {
   const cubiscanModelDropdown = document.getElementById('cubiscanmodel');
   const partsDropdown = document.getElementById('partsDropdown');
+  const quantityDropdown = document.getElementById('quantityDropdown');
   const addPartButton = document.getElementById('addPartButton');
   const partsUsedDiv = document.getElementById('textAreaParts');
 
@@ -508,26 +509,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to add selected part to the contenteditable div
   function addPart() {
     const selectedPart = partsDropdown.value;
-    if (selectedPart) {
-      // Create a new div for the part
+    const selectedQuantity = quantityDropdown.value;
+
+    if (selectedPart && selectedQuantity) {
+      // Create a new div for the part with the quantity appended
       const partDiv = document.createElement('div');
-      partDiv.textContent = selectedPart;
+      partDiv.textContent = `${selectedPart} - x ${selectedQuantity}`;
       partDiv.style.marginBottom = '5px';
 
       // Calculate the current column index
-      const columnIndex = Math.floor(partCount / 3) + 1;
+      const columnIndex = Math.floor(partCount / 4) + 1;
 
       // If it's time to add a new column (every 4 items), adjust the grid
-      if (partCount % 3 === 0) {
+      if (partCount % 4 === 0) {
         partsUsedDiv.style.gridTemplateColumns = `repeat(${columnIndex}, 1fr)`;
       }
 
       // Append the part to the appropriate column
       partsUsedDiv.appendChild(partDiv);
-      
+
       partCount++; // Increment the part count
     }
   }
+
+  // Initial population based on the current selection
+  updatePartsDropdown();
 });
 
 

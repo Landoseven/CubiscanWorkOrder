@@ -74,9 +74,9 @@ label {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  margin-bottom: -8px;
+  margin-bottom: 15px;
 }
 
 .techInfo {
@@ -90,6 +90,11 @@ label {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  flex-direction: column;
+}
+
+.modelAndService {
+  display: flex;
   flex-direction: column;
 }
 
@@ -158,15 +163,22 @@ input {
 
 .parts-container {
   display: grid;
-  grid-template-rows: 13% 25% 19%;
+  grid-template-rows: 13% 20% 19%;
   grid-template-columns: 49% 49%;
   column-gap: 5px;
   margin-bottom: 18px;
 }
 
+#partColumnOne {
+  display: grid;
+  grid-template-columns: 85% 1fr;
+  grid-column-gap: 2px;
+}
+
 #parts {
   grid-column: 1;
   grid-row: 1;
+  width: auto;
 }
 
 
@@ -179,7 +191,7 @@ input {
 
 #addPartButton {
   display: grid;
-  grid-column: 1;
+  grid-column: 1 / span 2;
   grid-row: 3;
   background-color: #4CAF50;
   color: white;
@@ -196,6 +208,19 @@ input {
   grid-row: 2;
   width: auto;
   height: 37px;
+}
+
+#quantityDropdown {
+  grid-column: 2;
+  grid-row: 2;
+  width: auto;
+  height: 37px;
+}
+
+#qtyLabel {
+  grid-column: 2;
+  grid-row: 1;
+  width: auto;
 }
 
 #partsreturnlabel {
@@ -271,7 +296,7 @@ button {
   border-radius: 4px;
   cursor: pointer;
   width: auto;
-  grid-row: 1;
+  grid-row: 211;
 }
 
 
