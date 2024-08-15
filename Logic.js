@@ -719,6 +719,6 @@ document.getElementById("generate").onclick = function () {
   html2pdf().set(opt).from(element).save() .then(() => {
     // Show the download button again after the PDF is generated
     downloadButton.style.display = 'block';
-    partButton.style.display = 'none';
+    partButton.style.display = 'block';
   });
 };
