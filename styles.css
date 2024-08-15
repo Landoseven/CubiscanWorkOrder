@@ -76,6 +76,7 @@ label {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  margin-bottom: -8px;
 }
 
 .techInfo {
@@ -157,10 +158,10 @@ input {
 
 .parts-container {
   display: grid;
-  grid-template-rows: 15% 28% 19%;
+  grid-template-rows: 13% 25% 19%;
   grid-template-columns: 49% 49%;
   column-gap: 5px;
-  margin-bottom: 7px;
+  margin-bottom: 18px;
 }
 
 #parts {
