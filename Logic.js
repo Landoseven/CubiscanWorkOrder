@@ -617,6 +617,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <option value="NMISC AKL Cabinet Door Key">NMISC AKL Cabinet Door Key</option>
         `;
         break;
+        
       case 'CS200-TS':
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
