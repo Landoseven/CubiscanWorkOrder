@@ -497,7 +497,156 @@ document.addEventListener('DOMContentLoaded', () => {
           <option value="NMISC AKL Cabinet Door Key">NMISC AKL Cabinet Door Key</option>
         `;
         break;
+      case '200-TS':
+        partsDropdown.innerHTML = `
+          <option value="Select">Select</option>
+          <option value="13000 Motor Belt">13000 Motor Belt</option>
+          <option value="13001 Emergency Stop Button, ES1">13001 Emergency Stop Button, ES1</option>
+          <option value="13002 Emergency Stop Button, ES2">13002 Emergency Stop Button, ES2</option>
+          <option value="13003 Circuit Breaker">13003 Circuit Breaker</option>
+          <option value="13004 Conveyor Belt, Large">13004 Conveyor Belt, Large</option>
+          <option value="13005 Conveyor Belt, Small">13005 Conveyor Belt, Small</option>
+          <option value="13006 Emergency Drive Unit">13006 Emergency Drive Unit</option>
+          <option value="13007 Encoder">13007 Encoder</option>
+          <option value="13008 Noise Filter, NF1">13008 Noise Filter, NF1</option>
+          <option value="13009 Noise Filter, NF2">13009 Noise Filter, NF2</option>
+          <option value="13010 Motor Inverter">13010 Motor Inverter</option>
+          <option value="13011 Motor Inverter, Option">13011 Motor Inverter, Option</option>
+          <option value="13012 IR Sensor Pair">13012 IR Sensor Pair</option>
+          <option value="13013 Signal Tower Light">13013 Signal Tower Light</option>
+          <option value="13014 Load Cell, ASY, 75 kg">13014 Load Cell, ASY, 75 kg</option>
+          <option value="13015 Display Membrane, Keys">13015 Display Membrane, Keys</option>
+          <option value="13016 Display Membrane, Logo">13016 Display Membrane, Logo</option>
+          <option value="13017 Display Membrane, Touch">13017 Display Membrane, Touch</option>
+          <option value="13018 Geared Motor">13018 Geared Motor</option>
+          <option value="13019 PCD ASY, A/D Connect">13019 PCD ASY, A/D Connect</option>
+          <option value="13020 PCB ASY, A/D">13020 PCB ASY, A/D</option>
+          <option value="13021 PCB ASY, Display I/F">13021 PCB ASY, Display I/F</option>
+          <option value="13022 PCB ASY, Display, I/O 1">13022 PCB ASY, Display, I/O 1</option>
+          <option value="13023 PCB ASY, Display, I/O 2">13023 PCB ASY, Display, I/O 2</option>
+          <option value="13024 PCB ASY, Display, Main">13024 PCB ASY, Display, Main</option>
+          <option value="13025 PCB ASY, Display, TFT Panel">13025 PCB ASY, Display, TFT Panel</option>
+          <option value="13026 PCB ASY, Gate, RCV">13026 PCB ASY, Gate, RCV</option>
+          <option value="13027 PCB ASY, Gate, XMIT">13027 PCB ASY, Gate, XMIT</option>
+          <option value="13028 PCB ASY, Mother">13028 PCB ASY, Mother</option>
+          <option value="13029 PCB ASY, Relay">13029 PCB ASY, Relay</option>
+          <option value="13030 Power Supply, REG 1">13030 Power Supply, REG 1</option>
+          <option value="13031 Power Supply, REG 2">13031 Power Supply, REG 2</option>
+          <option value="13032 Power Supply, REG 3">13032 Power Supply, REG 3</option>
+          <option value="13033 Drive Roller">13033 Drive Roller</option>
+          <option value="13034 Tension Roller">13034 Tension Roller</option>
+          <option value="13035 Magnetic Switch">13035 Magnetic Switch</option>
+          <option value="13036 Main Power Switch">13036 Main Power Switch</option>
+          <option value="13037 LCD Display Transformer">13037 LCD Display Transformer</option>
+        `;
+        break;
+      
+      case '210-L':
+        partsDropdown.innerHTML = `
+          <option value="Select">Select</option>
+          <option value="16174 MID RANGE SENSOR">16174 MID RANGE SENSOR</option>
+          <option value="16176 FULL RANGE SENSOR">16176 FULL RANGE SENSOR</option>
+          <option value="16934 FULL RANGE NTEP SENSOR">16934 FULL RANGE NTEP SENSOR</option>
+          <option value="16790 CS210-L CONTROL BOX">16790 CS210-L CONTROL BOX</option>
+          <option value="15612 FRAMES, EXTRUDED ALUMINUM">15612 FRAMES, EXTRUDED ALUMINUM</option>
+          <option value="16377 ENCODER MOUNT ASSEMBLY">16377 ENCODER MOUNT ASSEMBLY</option>
+        `;
+        break;
 
+      case '225':
+        partsDropdown.innerHTML = `
+          <option value="Select">Select</option>
+          <option value="14262 On/Off Switch Assembly">14262 On/Off Switch Assembly</option>
+          <option value="13210 PCB Assembly, Mother Board">13210 PCB Assembly, Mother Board</option>
+          <option value="14350 Relays (TE Connectivity, KUP-11d15-5)">14350 Relays (TE Connectivity, KUP-11d15-5)</option>
+          <option value="13218 AC/DC Power Supply Single-Out 12 V 8.33A 150 W">13218 AC/DC Power Supply Single-Out 12 V 8.33A 150 W</option>
+          <option value="13764 DC Motor Controller">13764 DC Motor Controller</option>
+          <option value="13866 Window, Dust Cover">13866 Window, Dust Cover</option>
+          <option value="14251 Roller 1.9 OD x 33L 7/16 HEX">14251 Roller 1.9 OD x 33L 7/16 HEX</option>
+          <option value="14253 Roller 2.5 OD x 26L 11/16 HEX">14253 Roller 2.5 OD x 26L 11/16 HEX</option>
+          <option value="14254 Roller 4 OD x 27L 11/16 HEX Flat">14254 Roller 4 OD x 27L 11/16 HEX Flat</option>
+          <option value="14255 Drive Roller 4.5 OD x 27L">14255 Drive Roller 4.5 OD x 27L</option>
+          <option value="14285 Bearing, 0.75ID Flange Mount">14285 Bearing, 0.75ID Flange Mount</option>
+          <option value="14244 Conveyor Belt 24W x 132L">14244 Conveyor Belt 24W x 132L</option>
+          <option value="14283 Timing Belt, 1'' W x 33'' L H Series">14283 Timing Belt, 1'' W x 33'' L H Series</option>
+          <option value="14257 L Encoder TR1 Mounting Bracket">14257 L Encoder TR1 Mounting Bracket</option>
+          <option value="14258 Trutrac-TR1 Encoder Assembly">14258 Trutrac-TR1 Encoder Assembly</option>
+          <option value="14210 Nose Roller Assembly">14210 Nose Roller Assembly</option>
+          <option value="14248 Bision 480DC Parallel Shaft DC Motor">14248 Bision 480DC Parallel Shaft DC Motor</option>
+          <option value="10273 Cal Cube 12x5x.36">10273 Cal Cube 12x5x.36</option>
+          <option value="13411 USB to Ethernet Adapter">13411 USB to Ethernet Adapter</option>
+          <option value="13413 Ethernet Cable, 10 ft">13413 Ethernet Cable, 10 ft</option>
+          <option value="14510 Acrylic Tray (24'' x 18'') (Optional)">14510 Acrylic Tray (24'' x 18'') (Optional)</option>
+          <option value="14437 User Manual (PDF)">14437 User Manual (PDF)</option>
+        `;
+        break;
+
+      case '275':
+        partsDropdown.innerHTML = `
+          <option value="Select">Select</option>
+          <option value="15077 ROLLER, MOTOR 28BF PM486FE">15077 ROLLER, MOTOR 28BF PM486FE</option>
+          <option value="15075 ROLLER, CONVYR 28BF x 1.9DIA">15075 ROLLER, CONVYR 28BF x 1.9DIA</option>
+          <option value="15076 ROLLER, CONVYR 28BF x 1.9DIA X2GRV">15076 ROLLER, CONVYR 28BF x 1.9DIA X2GRV</option>
+          <option value="14945 O-RING, 3/16DIAx9.5 HT BLU ITR">14945 O-RING, 3/16DIAx9.5" HT BLU ITR</option>
+          <option value="15071 CONVEYOR BELT 26IN">15071 CONVEYOR BELT 26IN</option>
+          <option value="15074 REFLECTOR, RL112G-1">15074 REFLECTOR, RL112G-1</option>
+          <option value="15128 DRIVE, ITOH MDR CBM-105FP">15128 DRIVE, ITOH MDR CBM-105FP</option>
+          <option value="14056 PHOTO EYE GRL18S, RT ANGLE">14056 PHOTO EYE GRL18S, RT ANGLE</option>
+          <option value="15020 CONVEYOR JUNCTION PCB">15020 CONVEYOR JUNCTION PCB</option>
+          <option value="15084 STACK LIGHT POST">15084 STACK LIGHT POST</option>
+          <option value="13945 STACK LIGHT G/R/Y">13945 STACK LIGHT G/R/Y</option>
+          <option value="14483 FUSE, 2.5A 125 VAC">14483 FUSE, 2.5A 125 VAC</option>
+          <option value="14467 RELAY, SPDT, 16A 24DC COIL">14467 RELAY, SPDT, 16A 24DC COIL</option>
+          <option value="14490 CIRCUIT BREAKER 1P 7A D CURVE">14490 CIRCUIT BREAKER 1P 7A D CURVE</option>
+          <option value="14262 SWITCH ASY, ON-OFF">14262 SWITCH ASY, ON-OFF</option>
+          <option value="14334 PCB ASY, MOTHERBOARD SCALE">14334 PCB ASY, MOTHERBOARD SCALE</option>
+          <option value="15041 POWER SUPPLY, 12VDC 54W">15041 POWER SUPPLY, 12VDC 54W</option>
+          <option value="13935 POWER SUPPLY, 24VDC 480W">13935 POWER SUPPLY, 24VDC 480W</option>
+          <option value="15080 FOOT PEDAL WITH CABLE">15080 FOOT PEDAL WITH CABLE</option>
+          <option value="15127 CS275 USER MANUAL">15127 CS275 USER MANUAL</option>
+          <option value="10275 CALIBRATION CUBE 12x12x12">10275 CALIBRATION CUBE 12x12x12</option>
+          <option value="13413 CAT 5e PATCH 10FT">13413 CAT 5e PATCH 10FT</option>
+          <option value="13411 USB TO ETHERNET ADAPTER">13411 USB TO ETHERNET ADAPTER</option>
+          <option value="14540 USB 2.0 CABLE 3M">14540 USB 2.0 CABLE 3M</option>
+          <option value="15087 REFLECTOR, BRT-42D, M5 STUD">15087 REFLECTOR, BRT-42D, M5 STUD</option>
+        `;
+        break;
+        
+      case '200-B':
+        partsDropdown.innerHTML = `
+          <option value="Select">Select</option>
+          <option value="10795 Motorized Roller, 50 m/min 800VP-GL, 120V, 57.50mm">10795 Motorized Roller, 50 m/min 800VP-GL, 120V, 57.50mm</option>
+          <option value="10797 Slave Roller 800VP-GL, 57mm">10797 Slave Roller 800VP-GL, 57mm</option>
+          <option value="12487 Pulley SS-41, 42mm">12487 Pulley SS-41, 42mm</option>
+          <option value="10798 Horizontal lens cover (lens filter - upper)">10798 Horizontal lens cover (lens filter - upper)</option>
+          <option value="10799 Horizontal lens cover (lens filter - lower)">10799 Horizontal lens cover (lens filter - lower)</option>
+          <option value="10800 Vertical lens cover (lens filter - sides)">10800 Vertical lens cover (lens filter - sides)</option>
+          <option value="10801 Fuse - 5A">10801 Fuse - 5A</option>
+          <option value="10802 Fuse - 1A">10802 Fuse - 1A</option>
+          <option value="10803 Serial Communication Cable">10803 Serial Communication Cable</option>
+          <option value="10804 Acrylic Dust Cover (width)">10804 Acrylic Dust Cover (width)</option>
+          <option value="10805 Roller Belt (6mm x 280 circumference)">10805 Roller Belt (6mm x 280 circumference)</option>
+          <option value="10806 Roller Belt (6mm x 390 circumference)">10806 Roller Belt (6mm x 390 circumference)</option>
+          <option value="10807 Roller Belt (6mm x 480 circumference)">10807 Roller Belt (6mm x 480 circumference)</option>
+          <option value="10808 E-Stop Switch (remote)">10808 E-Stop Switch (remote)</option>
+          <option value="10809 E-Stop Switch (control panel)">10809 E-Stop Switch (control panel)</option>
+          <option value="10810 Rotary Encoder Asy">10810 Rotary Encoder Asy</option>
+          <option value="Encoder Cable Asy">Encoder Cable Asy</option>
+          <option value="10811 IR Sensor pairs / Photoelectric Switch">10811 IR Sensor pairs/Photoelectric Switch</option>
+          <option value="10812 Error/Warning Light">10812 Error/Warning Light</option>
+          <option value="10813 Toggle Switch Cover - Acrylic">10813 Toggle Switch Cover - Acrylic</option>
+          <option value="10822 Toggle Switch Cover - Aluminum">10822 Toggle Switch Cover - Aluminum</option>
+          <option value="10814 On/Off Switch (panel)">10814 On/Off Switch (panel)</option>
+          <option value="10815 Sealable Cover for Load Cell Amp">10815 Sealable Cover for Load Cell Amp</option>
+          <option value="10818 Toggle Switch - 2 position">10818 Toggle Switch - 2 position</option>
+          <option value="10819 Toggle Switch - 3 position">10819 Toggle Switch - 3 position</option>
+          <option value="10820 Toggle Switch - momentary">10820 Toggle Switch - momentary</option>
+          <option value="12506 Length Sensor Mounting Bracket">12506 Length Sensor Mounting Bracket</option>
+          <option value="11339 Error Clear Button">11339 Error Clear Button</option>
+          <option value="10821 Plastic End Cap - Black">10821 Plastic End Cap - Black</option>
+        `;
+        break;
+        
       default:
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
@@ -674,7 +823,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         case 'CS200-TS':
         case 'CS200-B':
-        case 'CS210':
+        case 'CS210-L':
         case 'CS225':
         case 'CS275':
           switch (selectedService) {
