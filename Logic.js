@@ -529,6 +529,8 @@ document.addEventListener('DOMContentLoaded', () => {
       partsUsedDiv.appendChild(partDiv);
 
       partCount++; // Increment the part count
+
+      partsDropdown.value = "Select";
     }
   }
 
