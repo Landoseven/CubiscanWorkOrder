@@ -140,7 +140,7 @@ input {
 }
 
 #textAreaSerial {
-  min-height: 48px;
+  min-height: 35px;
   height: auto;
   width: inherit; /* Make the textarea full width */
   resize: vertical; /* Allow resizing only vertically*/
