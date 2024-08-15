@@ -455,8 +455,8 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 'S9':
-      case '1100AKL':
-      case '1200AKL':
+      case 'CS1100AKL':
+      case 'CS1200AKL':
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="13092 KINGSTON 960GB SSD SATA 3">13092 KINGSTON 960GB SSD SATA 3</option>
