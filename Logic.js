@@ -617,7 +617,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <option value="NMISC AKL Cabinet Door Key">NMISC AKL Cabinet Door Key</option>
         `;
         break;
-      case '200-TS':
+      case 'CS200-TS':
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="13000 Motor Belt">13000 Motor Belt</option>
@@ -661,7 +661,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         break;
       
-      case '210-L':
+      case 'CS210-L':
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="16174 MID RANGE SENSOR">16174 MID RANGE SENSOR</option>
@@ -673,7 +673,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         break;
 
-      case '225':
+      case 'CS225':
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="14262 On/Off Switch Assembly">14262 On/Off Switch Assembly</option>
@@ -701,7 +701,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         break;
 
-      case '275':
+      case 'CS275':
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="15077 ROLLER, MOTOR 28BF PM486FE">15077 ROLLER, MOTOR 28BF PM486FE</option>
@@ -732,7 +732,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         break;
         
-      case '200-B':
+      case 'CS200-B':
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="10795 Motorized Roller, 50 m/min 800VP-GL, 120V, 57.50mm">10795 Motorized Roller, 50 m/min 800VP-GL, 120V, 57.50mm</option>
