@@ -181,7 +181,7 @@ input {
   grid-template-rows: 11% 14% 34%;
   grid-template-columns: 49% 49%;
   column-gap: 48px;
-  margin-bottom: -4px;
+  margin-bottom: 31px;
 }
 
 #partColumnOne {
