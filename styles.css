@@ -102,6 +102,8 @@ input {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 10px;
+  height: 20px;
+  font-size: 14px;
 }
 
 #textAreaParts {
@@ -113,11 +115,11 @@ input {
   height: fit-content;
   width: inherit; /* Make the textarea full width */
   resize: vertical; /* Allow resizing only vertically*/
-  font-size: 12px;
+  font-size: 14px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 #textAreaNotes {
@@ -166,13 +168,14 @@ input {
   grid-template-rows: 13% 20% 19%;
   grid-template-columns: 49% 49%;
   column-gap: 5px;
-  margin-bottom: 18px;
+  margin-bottom: -25px;
 }
 
 #partColumnOne {
   display: grid;
   grid-template-columns: 85% 1fr;
   grid-column-gap: 2px;
+  grid-template-rows: 99% 128% 94%;
 }
 
 #parts {
@@ -181,6 +184,10 @@ input {
   width: auto;
 }
 
+#partsUsed {
+  grid-column: 1;
+  grid-row: 4;
+}
 
 #partsReturnDropdown {
   grid-row: 2;
