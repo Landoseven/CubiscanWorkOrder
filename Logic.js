@@ -788,10 +788,10 @@ document.addEventListener('DOMContentLoaded', () => {
       partDiv.style.marginBottom = '5px';
 
       // Calculate the current column index
-      const columnIndex = Math.floor(partCount / 4) + 1;
+      const columnIndex = Math.floor(partCount / 3) + 1;
 
-      // If it's time to add a new column (every 4 items), adjust the grid
-      if (partCount % 4 === 0) {
+      // If it's time to add a new column (every 3 items), adjust the grid
+      if (partCount % 3 === 0) {
         partsUsedDiv.style.gridTemplateColumns = `repeat(${columnIndex}, 1fr)`;
       }
 
