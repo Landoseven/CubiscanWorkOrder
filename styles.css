@@ -159,6 +159,18 @@ input {
   margin-bottom: 5px;
 }
 
+#tracking {
+  grid-column: 2;
+  grid-row: 4;
+  height: 15px;
+  width: inherit; /* Make the textarea full width */
+  resize: vertical; /* Allow resizing only vertically*/
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 #table1Data {
   display: flex;
   flex-direction: column;
@@ -166,7 +178,7 @@ input {
 
 .parts-container {
   display: grid;
-  grid-template-rows: 11% 14% 28%;
+  grid-template-rows: 11% 14% 32%;
   grid-template-columns: 49% 49%;
   column-gap: 5px;
   margin-bottom: -10px;
@@ -176,7 +188,14 @@ input {
   display: grid;
   grid-template-columns: 85% 1fr;
   grid-column-gap: 2px;
-  grid-template-rows: 103% 167% 118%;
+  grid-template-rows: 103% 189% 135%;
+}
+
+#partColumnTwo {
+  display: grid;
+  grid-template-rows: 118% 185% 0% 137%;
+  justify-content: start;
+  align-items: center;
 }
 
 #parts {
@@ -238,7 +257,6 @@ input {
 
 #partsreturn {
   grid-column: 2;
-
 }
 
 select {
