@@ -165,7 +165,7 @@ input {
 
 .parts-container {
   display: grid;
-  grid-template-rows: 15% 20% 23%;
+  grid-template-rows: 11% 14% 28%;
   grid-template-columns: 49% 49%;
   column-gap: 5px;
   margin-bottom: -10px;
@@ -175,7 +175,7 @@ input {
   display: grid;
   grid-template-columns: 85% 1fr;
   grid-column-gap: 2px;
-  grid-template-rows: 99% 128% 94%;
+  grid-template-rows: 103% 167% 118%;
 }
 
 #parts {
