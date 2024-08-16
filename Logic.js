@@ -113,10 +113,17 @@ document.addEventListener('DOMContentLoaded', () => {
     switch (selectedCubiscanModel) {
       case 'Select':
         partsDropdown.innerHTML = `
-          <option value="Select">Select</option>
+          <option value=" "> </option>
         `;
         break;
       case 'Multiple':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="12780 QI Sensor">12780 QI Sensor</option>
@@ -339,6 +346,13 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 'CS25':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="14119 CS25 Glass">14119 CS25 Glass</option>
@@ -376,6 +390,13 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 'CS125':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="15030 CS125 Display">15030 CS125 Display</option>
@@ -413,6 +434,13 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 'CS325':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="16152 CS325 DB25/DB9 HIGH FLEX Sleeved Cable For CHAIN">16152 CS325 DB25/DB9 HIGH FLEX Sleeved Cable For CHAIN</option>
@@ -457,6 +485,13 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 'CS100':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="12780 QI Sensor">12780 QI Sensor</option>
@@ -488,7 +523,14 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         break;
       
-      case 'CS110': 
+      case 'CS110':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `; 
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="14527 CS110 T Controller ASY">14527 CS110 T Controller ASY</option>
@@ -519,6 +561,13 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 'CS150':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="14012 CS150 T Controller ASY">14012 CS150 T Controller ASY</option>
@@ -551,6 +600,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       case 'CS75':
       case 'CS75PRO':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="14718 CS75 C PC/Combo Controller">14718 CS75 C PC/Combo Controller</option>
@@ -578,6 +634,13 @@ document.addEventListener('DOMContentLoaded', () => {
       case 'S9':
       case 'CS1100AKL':
       case 'CS1200AKL':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="13092 KINGSTON 960GB SSD SATA 3">13092 KINGSTON 960GB SSD SATA 3</option>
@@ -619,6 +682,13 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 'CS200-TS':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="13000 Motor Belt">13000 Motor Belt</option>
@@ -663,6 +733,13 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       
       case 'CS210-L':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="16174 MID RANGE SENSOR">16174 MID RANGE SENSOR</option>
@@ -675,6 +752,13 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 'CS225':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="14262 On/Off Switch Assembly">14262 On/Off Switch Assembly</option>
@@ -703,6 +787,13 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 'CS275':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="15077 ROLLER, MOTOR 28BF PM486FE">15077 ROLLER, MOTOR 28BF PM486FE</option>
@@ -734,6 +825,9 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
         
       case 'CS200-B':
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
           <option value="10795 Motorized Roller, 50 m/min 800VP-GL, 120V, 57.50mm">10795 Motorized Roller, 50 m/min 800VP-GL, 120V, 57.50mm</option>
@@ -769,6 +863,9 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
         
       default:
+        quantityDropdown.innerHTML = `
+          <option value="1">1</option>
+        `;
         partsDropdown.innerHTML = `
           <option value="Select">Select</option>
         `;
@@ -800,8 +897,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       partCount++; // Increment the part count
 
-      partsDropdown.value = "Select";
-      quantityDropdown.value = "1"
+      partsDropdown.value = " ";
+      quantityDropdown.value = " ";
     }
   }
 
