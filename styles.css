@@ -165,10 +165,10 @@ input {
 
 .parts-container {
   display: grid;
-  grid-template-rows: 13% 20% 19%;
+  grid-template-rows: 15% 20% 23%;
   grid-template-columns: 49% 49%;
   column-gap: 5px;
-  margin-bottom: -25px;
+  margin-bottom: -17px;
 }
 
 #partColumnOne {
