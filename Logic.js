@@ -12,7 +12,7 @@ canvas.height = 100;
 minCanvasWidth = 480;
 maxCanvasWidth = 1920;
 minCanvasHeight = 100;
-maxCanvasHeight = 110;
+maxCanvasHeight = 120;
 
 function resizeCanvas() {
   const canvasContainer = canvas.parentElement;
