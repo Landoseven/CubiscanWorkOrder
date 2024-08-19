@@ -314,7 +314,7 @@ tr {
 #siteRepresentative{
   grid-column: 1;
   grid-row: 2;
-  width: 70%;
+  width: 80%;
 }
 
 #siteRepLabel {
@@ -341,7 +341,7 @@ tr {
 #phone {
   grid-column: 3;
   grid-row: 2;
-  width: 70%;
+  width: 80%;
 }
 
 /* Signature */
