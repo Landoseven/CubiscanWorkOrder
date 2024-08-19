@@ -1079,7 +1079,7 @@ document.getElementById("generate").onclick = function () {
   const partButton = document.getElementById('addPartButton');
 	var element = document.getElementById('pdfContent');
 
-  // Hide the download and add part button
+  // Hide the download pdf and add part button
   downloadButton.style.display = 'none';
   partButton.style.display = 'none';
 
