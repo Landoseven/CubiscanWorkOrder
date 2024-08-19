@@ -227,7 +227,7 @@ input {
   width: auto;
   height: 25px;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 
 #partsDropdown {
