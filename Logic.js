@@ -7,12 +7,12 @@ const clearButton = document.getElementById('clear');
 window.addEventListener('resize', resizeCanvas);
 
 canvas.width = 712; 
-canvas.height = 90;
+canvas.height = 100;
 
 minCanvasWidth = 480;
 maxCanvasWidth = 1920;
-minCanvasHeight = 90;
-maxCanvasHeight = 102;
+minCanvasHeight = 100;
+maxCanvasHeight = 110;
 
 function resizeCanvas() {
   const canvasContainer = canvas.parentElement;
