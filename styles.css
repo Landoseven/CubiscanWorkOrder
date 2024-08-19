@@ -193,7 +193,7 @@ input {
 
 #partColumnTwo {
   display: grid;
-  grid-template-rows: 19% 38% 24%;
+  grid-template-rows: 19% 44% 24%;
   justify-content: start;
   align-items: center;
 }
