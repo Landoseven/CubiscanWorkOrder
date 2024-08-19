@@ -1,4 +1,4 @@
-//Canvas
+
 
 const canvas = document.getElementById('signature-pad');
 const ctx = canvas.getContext('2d');
@@ -901,8 +901,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       partCount++; // Increment the part count
 
-      partsDropdown.value = " ";
-      quantityDropdown.value = " ";
+      partsDropdown.value = "Select";
+      quantityDropdown.value = "1";
     }
   }
 
