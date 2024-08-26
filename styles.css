@@ -99,7 +99,7 @@ label {
 }
 
 input {
-  border: 1px solid #ccc;
+  border: 1px solid #a49e9e;
   border-radius: 4px;
   margin-bottom: 2px;
   height: 20px;
@@ -117,7 +117,7 @@ input {
   resize: vertical; /* Allow resizing only vertically*/
   font-size: 14px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #a49e9e;
   border-radius: 4px;
   margin-bottom: 0px;
 }
@@ -130,7 +130,7 @@ input {
   resize: vertical; /* Allow resizing only vertically*/
   font-size: 14px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #a49e9e;
   border-radius: 4px;
   margin-bottom: 10px;
 }
@@ -142,7 +142,7 @@ input {
   resize: vertical; /* Allow resizing only vertically*/
   font-size: 14px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #a49e9e;
   border-radius: 4px;
   margin-bottom: 5px;
 }
@@ -154,7 +154,7 @@ input {
   resize: vertical; /* Allow resizing only vertically*/
   font-size: 14px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #a49e9e;
   border-radius: 4px;
   margin-bottom: 5px;
 }
@@ -167,7 +167,7 @@ input {
   resize: vertical; /* Allow resizing only vertically*/
   font-size: 14px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #a49e9e;
   border-radius: 4px;
 }
 
@@ -261,7 +261,7 @@ input {
 
 select {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #a49e9e;
   border-radius: 4px;
   background-color: #fff;
   color: #333;
@@ -282,7 +282,7 @@ tbody {
   grid-template-rows: 1fr 1fr;
   font-size: 16.5px;
   padding: 0px;
-  border: 1px solid #ccc;
+  border: 1px solid #a49e9e;
   border-radius: 4px;
   border-spacing: 2px;
   margin-bottom: 10px;
@@ -301,7 +301,7 @@ input[type="checkbox"] {
 
 tr {
   padding: 1px;
-  border: 1px solid #ccc;
+  border: 1px solid #a49e9e;
   border-radius: 4px;
 }
 
@@ -349,7 +349,7 @@ tr {
 
 canvas {
   background-color: rgba(96, 102, 100, 0.267);
-  border: 1px solid #ccc;
+  border: 1px solid #a49e9e;
   border-radius: 4px;
 }
 
