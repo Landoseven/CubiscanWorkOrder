@@ -901,6 +901,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       partCount++; // Increment the part count
 
+      // Save the updated partsUsedDiv content to session storage
+      sessionStorage.setItem('textAreaParts', textAreaParts.innerHTML);
+
       partsDropdown.value = "Select";
       quantityDropdown.value = "1";
     }
@@ -1069,8 +1072,62 @@ document.addEventListener('DOMContentLoaded', () => {
         // No matching model; hide table
         break;
     }
+    // Save the updated tableContainer content to session storage
+  sessionStorage.setItem('tableContainer', tableContainer.innerHTML);
   }
 });
+
+//Save data on reload
+document.addEventListener('DOMContentLoaded', () => {
+  // List of all input and textarea field IDs that need to be saved
+  const fields = ['technician', 'customerSite', 'date', 'textAreaSerial', 'timeOnsite', 'SRO', 'cubiscanmodel', 'serviceperformed', 'tableContainer', 'siteRepresentative', 'email', 'phone'];
+  const editableDivs = ['textAreaSerial', 'tableContainer', 'textAreaParts', 'tracking', 'textAreaNotes']; // IDs of your contenteditable divs
+
+    // Restore data from Session Storage on page load
+    fields.forEach(field => {
+        const element = document.getElementById(field);
+        if (element) {
+            const savedValue = sessionStorage.getItem(field);
+            if (savedValue) {
+                element.value = savedValue;
+            }
+        }
+    });
+
+    editableDivs.forEach(divId => {
+        const element = document.getElementById(divId);
+        if (element) {
+            const savedContent = sessionStorage.getItem(divId);
+            if (savedContent) {
+                element.innerHTML = savedContent;
+            }
+        }
+    });
+
+    // Save data to Session Storage when input or textarea changes
+    fields.forEach(field => {
+        const element = document.getElementById(field);
+        if (element) {
+            element.addEventListener('input', () => {
+                sessionStorage.setItem(field, element.value);
+            });
+        }
+    });
+
+    // Save content from contenteditable divs to Session Storage
+    editableDivs.forEach(divId => {
+        const element = document.getElementById(divId);
+        if (element) {
+            element.addEventListener('input', () => {
+                sessionStorage.setItem(divId, element.innerHTML); // Use innerHTML or textContent based on your needs
+            });
+        }
+    });
+});
+
+
+
+
 // Print to PDF
 
 document.getElementById("generate").onclick = function () {
