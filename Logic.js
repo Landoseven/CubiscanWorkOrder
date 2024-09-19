@@ -1125,7 +1125,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//Clear Form Button
 
+document.addEventListener('DOMContentLoaded', () => {
+  // Function to clear the form and session storage
+  const clearForm = () => {
+      // Clear input and textarea fields
+      const fields = ['technician', 'customerSite', 'date', 'textAreaSerial', 'timeOnsite', 'SRO', 'cubiscanmodel', 'serviceperformed', 'tableContainer', 'siteRepresentative', 'email', 'phone'];
+          
+      fields.forEach(field => {
+          const element = document.getElementById(field);
+          if (element) {
+              element.value = ''; // Clear input and textarea fields
+          }
+      });
+
+      // Clear contenteditable divs
+      const editableDivs = ['textAreaSerial', 'tableContainer', 'textAreaParts', 'tracking', 'textAreaNotes']; // IDs of your contenteditable divs
+      editableDivs.forEach(divId => {
+          const element = document.getElementById(divId);
+          if (element) {
+              element.innerHTML = ''; // Clear contenteditable divs
+          }
+      });
+
+      // Clear session storage
+      sessionStorage.clear();
+  };
+
+  // Add event listener to the Clear button
+  const clearButton = document.getElementById('formClear');
+  if (clearButton) {
+      clearButton.addEventListener('click', clearForm);
+  }
+});
 
 
 // Print to PDF
@@ -1134,12 +1167,13 @@ document.getElementById("generate").onclick = function () {
 	// Your html2pdf code here.
   const downloadButton = document.getElementById('generate');
   const partButton = document.getElementById('addPartButton');
+  const formClearButton = document.getElementById('formClear')
 	var element = document.getElementById('pdfContent');
 
   // Hide the download pdf and add part button
   downloadButton.style.display = 'none';
   partButton.style.display = 'none';
-
+  formClearButton.style.display = 'none';
   var opt = {
     filename:     'Work_Order.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
@@ -1151,5 +1185,6 @@ document.getElementById("generate").onclick = function () {
     // Show the download button again after the PDF is generated
     downloadButton.style.display = 'block';
     partButton.style.display = 'block';
+    formClearButton.style.display = 'block';
   });
 };
