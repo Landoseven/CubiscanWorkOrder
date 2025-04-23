@@ -100,7 +100,6 @@ label {
 
 input {
   border: 1px solid #a49e9e;
-  border-radius: 4px;
   margin-bottom: 2px;
   height: 20px;
   font-size: 14px;
@@ -118,7 +117,6 @@ input {
   font-size: 14px;
   padding: 10px;
   border: 1px solid #a49e9e;
-  border-radius: 4px;
   margin-bottom: 0px;
 }
 
@@ -131,7 +129,6 @@ input {
   font-size: 14px;
   padding: 10px;
   border: 1px solid #a49e9e;
-  border-radius: 4px;
   margin-bottom: 10px;
 }
 
@@ -143,7 +140,6 @@ input {
   font-size: 14px;
   padding: 10px;
   border: 1px solid #a49e9e;
-  border-radius: 4px;
   margin-bottom: 5px;
 }
 
@@ -154,8 +150,6 @@ input {
   resize: vertical; /* Allow resizing only vertically*/
   font-size: 14px;
   padding: 10px;
-  border: 1px solid #a49e9e;
-  border-radius: 4px;
   margin-bottom: 5px;
 }
 
@@ -168,7 +162,6 @@ input {
   font-size: 14px;
   padding: 10px;
   border: 1px solid #a49e9e;
-  border-radius: 4px;
 }
 
 #table1Data {
@@ -223,7 +216,6 @@ input {
   background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 4px;
   width: auto;
   height: 25px;
   justify-content: center;
@@ -262,7 +254,6 @@ input {
 select {
   padding: 10px;
   border: 1px solid #a49e9e;
-  border-radius: 4px;
   background-color: #fff;
   color: #333;
   margin-bottom: 10px;
@@ -282,7 +273,6 @@ tbody {
   grid-template-rows: 1fr 1fr;
   font-size: 16.5px;
   padding: 0px;
-  border-radius: 4px;
   border-spacing: 2px;
   margin-bottom: 10px;
   justify-content: flex-start;
@@ -301,7 +291,6 @@ input[type="checkbox"] {
 tr {
   padding: 1px;
   border: 1px solid #a49e9e;
-  border-radius: 4px;
 }
 
 #siteRepInfo {
@@ -349,7 +338,6 @@ tr {
 canvas {
   background-color: rgba(96, 102, 100, 0.267);
   border: 1px solid #a49e9e;
-  border-radius: 4px;
 }
 
 #signatureDiv {
@@ -371,7 +359,6 @@ button {
   background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   width: auto;
 }
@@ -381,7 +368,6 @@ button {
   background-color: #d41a1a;
   color: white;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   width: auto;
   align-content: center;
