@@ -374,6 +374,24 @@ button {
   align-content: center;
 }
 
+/* Ensure consistent layout regardless of orientation */
+@media (max-width: 768px) {
+  .grid-cols-3 {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 0.5rem !important;
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    gap: 0.25rem !important;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.5rem !important;
+  }
+}
+
 @media print {
 body {
   -webkit-print-color-adjust: exact !important;  
