@@ -1,6 +1,6 @@
 
 
-const canvas = document.getElementById('signature-pad');
+/*const canvas = document.getElementById('signature-pad');
 const ctx = canvas.getContext('2d');
 const clearButton = document.getElementById('clear');
 
@@ -89,6 +89,165 @@ canvas.addEventListener('touchend', () => {
 
 function printPage() {
   window.print();
+}*/
+
+"use client"
+
+import React, { useRef, useState, useEffect } from "react"
+
+export default function SignaturePad({ onChange, orientation }) {
+  const canvasRef = useRef(null)
+  const [isDrawing, setIsDrawing] = useState(false)
+  const [hasSignature, setHasSignature] = useState(false)
+
+  const getContext = () => {
+    const canvas = canvasRef.current
+    if (!canvas) return null
+
+    const ctx = canvas.getContext("2d")
+    if (!ctx) return null
+
+    ctx.lineWidth = 2.5
+    ctx.lineCap = "round"
+    ctx.lineJoin = "round"
+    ctx.strokeStyle = "#000000"
+
+    return ctx
+  }
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const resizeCanvas = () => {
+      const parent = canvas.parentElement
+      if (!parent) return
+
+      const style = window.getComputedStyle(parent)
+      const width = parent.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight)
+
+      canvas.width = width
+      canvas.height = orientation === "portrait" ? 200 : 150
+
+      const ctx = getContext()
+      if (ctx) {
+        ctx.fillStyle = "#f3f4f6"
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+      }
+    }
+
+    resizeCanvas()
+    window.addEventListener("resize", resizeCanvas)
+
+    return () => {
+      window.removeEventListener("resize", resizeCanvas)
+    }
+  }, [orientation])
+
+  const startDrawing = (e) => {
+    const ctx = getContext()
+    if (!ctx) return
+
+    setIsDrawing(true)
+    setHasSignature(true)
+
+    let x, y
+    if (e.touches) {
+      const rect = canvasRef.current?.getBoundingClientRect()
+      if (!rect) return
+      x = e.touches[0].clientX - rect.left
+      y = e.touches[0].clientY - rect.top
+    } else {
+      x = e.nativeEvent.offsetX
+      y = e.nativeEvent.offsetY
+    }
+
+    ctx.beginPath()
+    ctx.moveTo(x, y)
+  }
+
+  const draw = (e) => {
+    if (!isDrawing) return
+
+    const ctx = getContext()
+    if (!ctx) return
+
+    let x, y
+    if (e.touches) {
+      e.preventDefault()
+      const rect = canvasRef.current?.getBoundingClientRect()
+      if (!rect) return
+      x = e.touches[0].clientX - rect.left
+      y = e.touches[0].clientY - rect.top
+    } else {
+      x = e.nativeEvent.offsetX
+      y = e.nativeEvent.offsetY
+    }
+
+    ctx.lineTo(x, y)
+    ctx.stroke()
+  }
+
+  const endDrawing = () => {
+    const ctx = getContext()
+    if (!ctx) return
+
+    ctx.closePath()
+    setIsDrawing(false)
+
+    const canvas = canvasRef.current
+    if (canvas && onChange) {
+      onChange(canvas.toDataURL())
+    }
+  }
+
+  const clearSignature = () => {
+    const canvas = canvasRef.current
+    const ctx = getContext()
+    if (!canvas || !ctx) return
+
+    ctx.fillStyle = "#f3f4f6"
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+    setHasSignature(false)
+    if (onChange) {
+      onChange(null)
+    }
+  }
+
+  return (
+    <div className="space-y-2">
+      <div className="border border-gray-300 rounded bg-gray-100 relative">
+        <canvas
+          ref={canvasRef}
+          className="touch-none w-full cursor-crosshair"
+          onMouseDown={startDrawing}
+          onMouseMove={draw}
+          onMouseUp={endDrawing}
+          onMouseLeave={endDrawing}
+          onTouchStart={startDrawing}
+          onTouchMove={draw}
+          onTouchEnd={endDrawing}
+        />
+
+        {!hasSignature && (
+          <div className="absolute inset-0 flex items-center justify-center text-gray-400 pointer-events-none">
+            Sign here
+          </div>
+        )}
+      </div>
+
+      <div className="flex justify-end">
+        <button
+          type="button"
+          onClick={clearSignature}
+          className="text-sm border border-gray-300 rounded px-3 py-1 bg-white hover:bg-gray-100"
+        >
+          Clear Signature
+        </button>
+      </div>
+    </div>
+  )
 }
 
 document.addEventListener('DOMContentLoaded', () => {
