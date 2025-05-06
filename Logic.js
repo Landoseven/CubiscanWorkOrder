@@ -939,44 +939,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 })
 
-// Print to PDF
-document.addEventListener("DOMContentLoaded", () => {
-  // Declare html2pdf
-  const html2pdf = html2pdf || (() => {})
-
-  const downloadButton = document.getElementById("generate")
-  const formClearButton = document.getElementById("formClear")
-  var element = document.getElementById("pdfContent")
-
-  // Fix the invalid use before declaration error by declaring html2pdf before using it
-  const generatePDF = () => {
-    downloadButton.style.display = "none"
-    formClearButton.style.display = "none"
-
-    var opt = {
-      filename: "Work_Order.pdf",
-      image: { type: "jpeg", quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-    }
-
-    html2pdf()
-      .set(opt)
-      .from(element)
-      .save()
-      .then(() => {
-        // Show the buttons again after the PDF is generated
-        downloadButton.style.display = "block"
-        formClearButton.style.display = "block"
-      })
-  }
-
-  const generateButton = document.getElementById("generate")
-  if (generateButton) {
-    generateButton.addEventListener("click", generatePDF)
-  }
-})
-
 // Update the addPart function to handle the 3-column layout
 document.addEventListener("DOMContentLoaded", () => {
   const partsDropdown = document.getElementById("partsDropdown")
@@ -1036,3 +998,41 @@ function addCommonParts() {
     }
   })
 }
+
+// Print to PDF
+document.addEventListener("DOMContentLoaded", () => {
+  // Declare html2pdf
+  const html2pdf = html2pdf || (() => {})
+
+  const downloadButton = document.getElementById("generate")
+  const formClearButton = document.getElementById("formClear")
+  var element = document.getElementById("pdfContent")
+
+  // Fix the invalid use before declaration error by declaring html2pdf before using it
+  const generatePDF = () => {
+    downloadButton.style.display = "none"
+    formClearButton.style.display = "none"
+
+    var opt = {
+      filename: "Work_Order.pdf",
+      image: { type: "jpeg", quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+    }
+
+    html2pdf()
+      .set(opt)
+      .from(element)
+      .save()
+      .then(() => {
+        // Show the buttons again after the PDF is generated
+        downloadButton.style.display = "block"
+        formClearButton.style.display = "block"
+      })
+  }
+
+  const generateButton = document.getElementById("generate")
+  if (generateButton) {
+    generateButton.addEventListener("click", generatePDF)
+  }
+})
