@@ -1,412 +1,273 @@
+:root {
+  --border-color: #ccc;
+  --primary-button-color: #4caf50;
+  --danger-button-color: #d41a1a;
+  --header-bg-color: #000;
+  --header-border-color: #3b3b3b;
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  display: inherit;
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  margin: 1px;
-  height: 1000px;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
 }
 
 /* Header */
-
 header {
-  z-index: 100;
-  height: 50px;
+  background-color: var(--header-bg-color);
+  padding: 10px 0;
+  text-align: center;
   width: 100%;
-  border-bottom: solid 1px #3b3b3b;
-  background-color: rgb(0, 0, 0);
-  border-bottom: solid 3px #3b3b3b;
-  font-size: large;
-  color: azure;
 }
 
 header .content {
   display: flex;
-  height: 25px;
-  padding-top: 15px;
-  margin: auto;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-}
-
-header .logo {
-  flex: 1;
-  text-decoration: none;
-  padding-right: 5px;
-}
-
-#myForm {
-  display: grid;
-  grid-template-rows: 5%;
-  width: auto;
-  height: 1025px;
-  margin-top: 25px;
-  margin-left: 18px;
-  margin-right: 18px;
-  align-items: start;
-  justify-content: center;
-  justify-items: center;
-}
-
-/* Form */
-
-.form1 {
-  display: grid;
-}
-
-.form2 {
-  display: flex;
-  flex-direction: column;
-  margin: 8px;
-}
-
-label {
-  margin-bottom: 0px;
-  margin-right: 5PX;
-}
-
-#site-rep {
-  height: 25px;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  margin-bottom: 15px;
-}
-
-.techInfo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-.techInfo2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-.modelAndService {
-  display: flex;
-  flex-direction: column;
-}
-
-input {
-  border: 1px solid #a49e9e;
-  margin-bottom: 2px;
-  height: 20px;
-  font-size: 14px;
-}
-
-#textAreaParts {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Start with one column */
-  grid-row: 2;
-  grid-column: 1 / span 2;
-  min-height: 48px;
-  height: fit-content;
-  width: 93%; /* Make the textarea full width */
-  resize: vertical; /* Allow resizing only vertically*/
-  font-size: 14px;
-  padding: 10px;
-  border: 1px solid #a49e9e;
-  margin-bottom: 0px;
-}
-
-
-#textAreaNotes {
-  min-height: 48px;
-  height: auto;
-  width: inherit; /* Make the textarea full width */
-  resize: vertical; /* Allow resizing only vertically*/
-  font-size: 14px;
-  padding: 10px;
-  border: 1px solid #a49e9e;
-  margin-bottom: 10px;
-}
-
-#textAreaSumm {
-  min-height: 48px;
-  height: auto;
-  width: inherit; /* Make the textarea full width */
-  resize: vertical; /* Allow resizing only vertically*/
-  font-size: 14px;
-  padding: 10px;
-  border: 1px solid #a49e9e;
-  margin-bottom: 5px;
-}
-
-#textAreaSerial {
-  min-height: 35px;
-  height: auto;
-  width: auto; /* Make the textarea full width */
-  resize: vertical; /* Allow resizing only vertically*/
-  font-size: 14px;
-  padding: 10px;
-  margin-bottom: 5px;
-  border: 1px solid #a49e9e;
-}
-
-#tracking {
-  grid-column: 2;
-  grid-row: 3;
-  height: 15px;
-  width: inherit; /* Make the textarea full width */
-  resize: vertical; /* Allow resizing only vertically*/
-  font-size: 14px;
-  padding: 10px;
-  border: 1px solid #a49e9e;
-}
-
-#table1Data {
-  display: flex;
-  flex-direction: column;
-}
-
-.parts-container {
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: 49% 49%;
-  column-gap: 48px;
-  margin-bottom: 0px;
-}
-
-#partColumnOne {
-  display: grid;
-  grid-template-columns: 85% 1fr;
-  grid-column-gap: 2px;
-  grid-template-rows: 19% 38% 24%;
-}
-
-#partColumnTwo {
-  display: grid;
-  grid-template-rows: 19% 44% 24%;
-  justify-content: center;
   align-items: center;
-}
-
-#parts {
-  grid-column: 1;
-  grid-row: 1;
-  width: 98%;
-}
-
-#partsUsed {
-  grid-column: 1;
-  grid-row: 4;
-}
-
-#partsReturnDropdown {
-  grid-row: 2;
-  grid-column: 2;
-  height: 37px;
-  font-size: 14px;
-}
-
-#addPartButton {
-  display: grid;
-  grid-column: 1 / span 2;
-  grid-row: 3;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  width: auto;
-  height: 25px;
   justify-content: center;
-  align-content: center;
 }
 
-#partsDropdown {
-  grid-column: 1;
-  grid-row: 2;
-  width: auto;
-  height: 37px;
-}
-
-#quantityDropdown {
-  grid-column: 2;
-  grid-row: 2;
-  width: auto;
-  height: 37px;
-}
-
-#qtyLabel {
-  grid-column: 2;
-  grid-row: 1;
-  width: auto;
-}
-
-#partsreturnlabel {
-  grid-row: 1;
-  grid-column: 2;
-}
-
-#partsreturn {
-  grid-column: 2;
-}
-
-select {
-  padding: 10px;
-  border: 1px solid #a49e9e;
-  background-color: #fff;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-/* Table with checkboxes */
-
-table {
-  display: flex;
-  margin-bottom: 10px;
-  justify-content: space-around;
-}
-
-tbody {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  font-size: 16.5px;
-  padding: 0px;
-  border-spacing: 2px;
-  margin-bottom: 10px;
-  justify-content: flex-start;
-}
-
-
-td {
-  display: flex;
-  align-items: center;
-}
-
-input[type="checkbox"] {
+header .logo img {
+  height: 30px;
   margin-right: 10px;
 }
 
-tr {
-  padding: 1px;
-  border: 1px solid #a49e9e;
+header .title {
+  color: white;
+  font-size: 20px;
 }
 
-#siteRepInfo {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
-  justify-content: space-between;
+/* Form Container */
+#myForm {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 15px;
 }
 
-#siteRepresentative{
-  grid-column: 1;
-  grid-row: 2;
-  width: 97%;
+/* Form Controls */
+input,
+select,
+[contenteditable="true"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
-#siteRepLabel {
-  grid-column: 1;
-  grid-row: 1;
+select {
+  appearance: menulist;
 }
 
-#email {
-  grid-row: 2;
-  grid-column: 2;
-  width: 97%;
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 
-#emailLabel {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-#phoneLabel {
-  grid-column: 3;
-  grid-row: 1;
-}
-
-#phone {
-  grid-column: 3;
-  grid-row: 2;
-  width: 97%;
-}
-
-/* Signature */
-
-canvas {
-  background-color: rgba(96, 102, 100, 0.267);
-  border: 1px solid #a49e9e;
-}
-
-#signatureDiv {
-  grid-row: 175;
+/* Grid Layout */
+.form-row {
   display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
-#buttonPlacement {
+.form-col {
+  flex: 1;
+}
+
+/* Maintenance Table */
+.maintenance-table {
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-row: 125;
-  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 12px;
+}
+
+.maintenance-table-cell {
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  display: flex;
   align-items: center;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
+.maintenance-table-cell input[type="checkbox"] {
+  margin-right: 8px;
+  width: auto;
+}
+
+/* Parts Section */
+.parts-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.parts-controls-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.parts-col {
+  flex: 1;
+}
+
+.parts-input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.parts-input-group .parts-dropdown {
+  flex: 3;
+}
+
+.parts-input-group .qty-dropdown {
+  flex: 1;
+}
+
+#addPartButton {
+  width: 100%;
+  padding: 8px;
+  background-color: var(--primary-button-color);
   color: white;
   border: none;
   cursor: pointer;
-  width: auto;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Parts Used Grid */
+#textAreaParts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  min-height: 100px;
+  grid-column: 1 / span 2; /* Make it span both columns */
+  width: 100%;
+}
+
+/* Text Areas */
+#textAreaNotes {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#tracking {
+  min-height: 40px;
+}
+
+/* Site Rep Info */
+.site-rep-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.site-rep-col {
+  flex: 1;
+}
+
+/* Signature */
+#signature-pad {
+  width: 100%;
+  height: 120px;
+  background-color: rgba(96, 102, 100, 0.1);
+  border: 1px solid var(--border-color);
+  margin-bottom: 15px;
+  touch-action: none;
+}
+
+/* Buttons */
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.button-row button {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+#generate {
+  background-color: var(--primary-button-color);
 }
 
 #formClear {
-  padding: 10px 20px;
-  background-color: #d41a1a;
-  color: white;
-  border: none;
-  cursor: pointer;
-  width: auto;
-  align-content: center;
+  background-color: var(--danger-button-color);
 }
 
-/* Ensure consistent layout regardless of orientation */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .grid-cols-3 {
-    grid-template-columns: 1fr 1fr 1fr !important;
-    gap: 0.5rem !important;
+  .form-row,
+  .parts-section,
+  .site-rep-row {
+    flex-direction: column;
+    gap: 0;
   }
 
-  .grid-cols-4 {
-    grid-template-columns: 1fr 1fr 1fr 1fr !important;
-    gap: 0.25rem !important;
+  .parts-controls {
+    flex-direction: row;
   }
 
-  .grid-cols-2 {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 0.5rem !important;
+  .maintenance-table {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #textAreaParts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-row button {
+    width: 80%;
   }
 }
 
+@media (max-width: 480px) {
+  .maintenance-table {
+    grid-template-columns: 1fr;
+  }
+
+  #textAreaParts {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Print Styles */
 @media print {
-body {
-  -webkit-print-color-adjust: exact !important;  
-  print-color-adjust: exact !important;          
-  height: 100%;
-  overflow: hidden;
-  background: #FFF; 
-  font-size: 12pt;
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    font-size: 12pt;
+  }
+
+  .button-row {
+    display: none;
+  }
 }
 
-@page {
-size: A4;
-}
-
-.template { width: auto; left:0; top:0; }
-img { width:100%; }
-li { margin: 0 0 10px 20px !important;}
+/* Add styles for the summary of service area */
+#textAreaSumm {
+  width: 100%;
+  min-height: 80px;
+  margin-bottom: 15px;
 }
