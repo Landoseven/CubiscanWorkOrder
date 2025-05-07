@@ -970,6 +970,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("signature-pad")
     const ctx = canvas.getContext("2d")
     ctx.clearRect(0, 0, canvas.width, canvas.height)
+    sessionStorage.removeItem("signature") // Add this line to remove signature from storage
+
 
     // Hide maintenance tables
     const maintenanceContainer = document.getElementById("maintenanceContainer")
@@ -1047,6 +1049,14 @@ function addCommonParts() {
     }
   })
 }
+
+  // Restore signature if available
+  restoreSignature()
+
+  // Restore signature after window resize
+  window.addEventListener("resize", () => {
+    setTimeout(restoreSignature, 100) // Small delay to ensure canvas is resized first
+  })
 
 // Print to PDF
 
