@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
         break
       case "CS200-TS":
       case "CS200-SQ":
-      case "CS Freight Weigh":
+      case "FreightWeigh 150":
         addPartsForCS200TS()
         break
       case "CS200-B":
@@ -777,7 +777,7 @@ document.addEventListener("DOMContentLoaded", () => {
       case "CS210-L":
       case "CS225":
       case "CS75 Pro Slam":
-      case "CS Freight Weigh":
+      case "FreightWeigh 150":
         // Create and append the CS200 series maintenance table
         const cs200Table = createMaintenanceTable("CS200", [
           "Checked proper tension of belts",
