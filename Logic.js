@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Add model-specific parts
     switch (selectedCubiscanModel) {
       case "Select":
+        addAllParts()
         break
       case "CS25":
         addPartsForCS25()
@@ -135,11 +136,16 @@ document.addEventListener("DOMContentLoaded", () => {
       case "CS75PRO":
         addPartsForCS75()
         break
-      case "CS1100AKL":
-      case "CS1200AKL":
+      case "CS1100":
+      case "CS1200":
+      case "CS1200 FM":
+      case "CS1200 IM":
+      case "Contour Pro":
         addPartsForAKL()
         break
       case "CS200-TS":
+      case "CS200-SQ":
+      case "CS Freight Weigh":
         addPartsForCS200TS()
         break
       case "CS200-B":
@@ -151,7 +157,8 @@ document.addEventListener("DOMContentLoaded", () => {
       case "CS225":
         addPartsForCS225()
         break
-      case "CS275":
+      case "CS75 Pro Slam":
+        addPartsForCS75()
         addPartsForCS275()
         break
       case "Multiple":
@@ -705,8 +712,11 @@ document.addEventListener("DOMContentLoaded", () => {
         maintenanceContainer.appendChild(maintenanceCS100)
         maintenanceContainer.style.display = "block"
         break
-      case "CS1100AKL":
-      case "CS1200AKL":
+      case "CS1100":
+      case "CS1200":
+      case "CS1200 FM":
+      case "CS1200 IM":
+      case "Contour Pro":  
         // Create and append the AKL maintenance table
         const aklTable = createMaintenanceTable("AKL", [
           "Checked proper tension of belts",
@@ -756,10 +766,12 @@ document.addEventListener("DOMContentLoaded", () => {
         maintenanceContainer.style.display = "block"
         break
       case "CS200-TS":
+      case "CS200-SQ":
       case "CS200-B":
       case "CS210-L":
       case "CS225":
-      case "CS275":
+      case "CS75 Pro Slam":
+      case "CS Freight Weigh":
         // Create and append the CS200 series maintenance table
         const cs200Table = createMaintenanceTable("CS200", [
           "Checked proper tension of belts",
