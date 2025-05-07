@@ -87,6 +87,36 @@ canvas.addEventListener("touchend", () => {
   isDrawing = false
 })
 
+// Add these functions after the existing canvas event listeners
+
+// Function to save signature to session storage
+function saveSignature() {
+  const canvas = document.getElementById("signature-pad")
+  if (canvas) {
+    const signatureData = canvas.toDataURL("image/png")
+    sessionStorage.setItem("signature", signatureData)
+  }
+}
+
+// Function to restore signature from session storage
+function restoreSignature() {
+  const canvas = document.getElementById("signature-pad")
+  const ctx = canvas.getContext("2d")
+  const savedSignature = sessionStorage.getItem("signature")
+
+  if (savedSignature) {
+    const img = new Image()
+    img.onload = () => {
+      ctx.drawImage(img, 0, 0)
+    }
+    img.src = savedSignature
+  }
+}
+
+// Save signature after drawing
+canvas.addEventListener("mouseup", saveSignature)
+canvas.addEventListener("touchend", saveSignature)
+
 // Parts dropdown and model selection
 document.addEventListener("DOMContentLoaded", () => {
   const cubiscanModelDropdown = document.getElementById("cubiscanmodel")
