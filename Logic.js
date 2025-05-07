@@ -270,6 +270,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "14129 CS25/325 HDMI 2FT Cable",
       "12844 CSx25 TX Board",
       "12841 CSx25 RX Board",
+      "16231 CSx25 TX Board KingBright",
+      "16234 CSx25 RX Board KingBright",
       "13218 CSx25 PowerSupply",
       "13351 CSx25 1Amp Fuse",
       "14100 CS25/325 Controller ASY",
