@@ -87,6 +87,10 @@ canvas.addEventListener("touchend", () => {
   isDrawing = false
 })
 
+// Save signature after drawing
+canvas.addEventListener("mouseup", saveSignature)
+canvas.addEventListener("touchend", saveSignature)
+
 // Add these functions after the existing canvas event listeners
 
 // Function to save signature to session storage
@@ -113,9 +117,7 @@ function restoreSignature() {
   }
 }
 
-// Save signature after drawing
-canvas.addEventListener("mouseup", saveSignature)
-canvas.addEventListener("touchend", saveSignature)
+
 
 // Parts dropdown and model selection
 document.addEventListener("DOMContentLoaded", () => {
