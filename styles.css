@@ -1,5 +1,5 @@
 :root {
-  --border-color: #ccc;
+  --border-color: #808080;
   --primary-button-color: #4caf50;
   --danger-button-color: #d41a1a;
   --header-bg-color: #000;
@@ -49,6 +49,7 @@ header .title {
   max-width: 850px;
   margin: 0 auto;
   padding: 15px;
+  border: 1.5px solid #808080;
 }
 
 /* Form Controls */
