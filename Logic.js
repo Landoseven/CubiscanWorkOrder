@@ -196,6 +196,9 @@ document.addEventListener("DOMContentLoaded", () => {
         addPartsForCS75()
         addPartsForCS275()
         break
+      case "S9":
+        addPartsForS9()
+        break  
       case "Multiple":
         addAllParts()
         break
@@ -506,6 +509,37 @@ document.addEventListener("DOMContentLoaded", () => {
       "14553 CAL BOX 60x20x20",
       "15019 Zebra Barcode Cordless Kit Serial Only",
       "NMISC AKL Cabinet Door Key",
+    ]
+
+    parts.forEach((part) => {
+      const option = document.createElement("option")
+      option.value = part
+      option.textContent = part
+      partsDropdown.appendChild(option)
+    })
+  }
+
+  function addPartsForS9() {
+    const parts = [
+      "15858 Axis Camera",
+      "16470 Touch Display",
+      "13579 LMS500 Laser Head",
+      "16473 Stack Light Green",
+      "16474 Stack Light Red",
+      "16475 Stack Light Amber",
+      "16805 Zebra Scanner Kit",
+      "12035 Cal Cube",
+      "16678 Scale Cable DB9",
+      "16923 Splitter S9",
+      "16916 Sensor Relay Board",
+      "16992 INST Kit Cousins",
+      "16995 INST Kit LanTech",
+      "16996 INST Kit WulfTech",
+      "16997 INST Kit Orion",
+      "16998 INST Kit Highlight",
+      "16999 INST Kit Eagle",
+      "17000 INST Kit RoboPac",
+      "17292 INST Kit Cousins No Arm",
     ]
 
     parts.forEach((part) => {
