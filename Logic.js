@@ -159,6 +159,9 @@ document.addEventListener("DOMContentLoaded", () => {
       case "CS325":
         addPartsForCS325()
         break
+      case "CS325_V2":
+        addPartsForCS325_V2()
+        break  
       case "CS100":
       case "CS110":
       case "CS150":
@@ -334,6 +337,58 @@ document.addEventListener("DOMContentLoaded", () => {
       "12708 Qbit Xfer",
     ]
 
+    parts.forEach((part) => {
+      const option = document.createElement("option")
+      option.value = part
+      option.textContent = part
+      partsDropdown.appendChild(option)
+    })
+  }
+
+  function addPartsForCS325_V2() {
+    const parts = [
+      "13624 Cal Cube", 
+      "14967 Dust Cover",
+      "13411 USB to Ethernet Adapter",
+      "16924 RJ45 Ethernet Cable",
+      "11493 USB to Serial",
+      "12997 USB to Serial Adapter",
+      "10083 AC Power Cord",
+      "14697 LED Filter",
+      "13227 Distribution Board",
+      "12841 RX Vishay Board",
+      "16231 TX Kingbright Board",
+      "14113 Small Cable Ribbon",
+      "14156 Large Cable Ribbon",
+      "14714 Small Cable Ribbon (DB9 Gate)",
+      "14715 Large Cable ribbon (DB25 Gate)",
+      "13303 2P-2P 10in PWR Cable Board",
+      "13304 2P-2P 14in PWR Cable Board",
+      "13305 3P-2P 20in PWR Cable Board",
+      "13306 3P-3P 15in PWR Cable Board",
+      "13307 3P-3P 33in PWR Cable Board",
+      "16422 CTRLR ASY V2",
+      "13351 Fuse 250V 1AMP", 
+      "13476 SD Memory 16GB/32GB",
+      "13218 PWR Supply 150WATT 2x4in AC/DC",
+      "16420 CS325 V2 Display",
+      "16445 HDMI CBL",
+      "12344 Ball 1/4 DIA",
+      "16254 LDU 181.1 Summing Board",
+      "17028 Load Cell 4 50KG",
+      "16084 LDU 181.1 Scale Card",
+      "14066 Leveling Foot",
+      "14743 CBLASY Encoder",
+      "14736 CBLASY Gate PWR",
+      "16623 CBLASY Home Sensor",
+      "16152 CBLASY Sml/Lrg Gate Ribbon",
+      "14720 Glass ASY",
+      "14450 Axis Camera Kit",
+      "12700 Qbit DB",
+      "12701 Qbit EDT",
+      "12703 Qbit WEB",
+      "12708 Qbit Xfer",
+    ]
     parts.forEach((part) => {
       const option = document.createElement("option")
       option.value = part
@@ -741,6 +796,7 @@ document.addEventListener("DOMContentLoaded", () => {
       case "CS25":
       case "CS125":
       case "CS325":
+      case "CS325_V2":
         maintenanceContainer.appendChild(maintenanceCS25)
         maintenanceContainer.style.display = "block"
         break
