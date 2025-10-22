@@ -852,7 +852,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Mechanical calibration",
           "Checked prox sensor height",
           "Cleaned Cubiscan and cameras",
-          "Tigthened motor bolt",
+          "Tigthened motor bolt and axel couplers",
           "Inspected Chain Assemby",
           "Tightened linear bearings",
           "Calibrated touchscreen",
@@ -873,6 +873,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Calibrated touchscreen",
           "Checked tower is level",
           "Verified measurement trigger",
+          "Verified Scale and Scanner transmission",
         ])
         maintenanceContainer.appendChild(s9Table)
         maintenanceContainer.style.display = "block"
@@ -916,6 +917,15 @@ document.addEventListener("DOMContentLoaded", () => {
           "Verified system flow and functionality",
         ])
         maintenanceContainer.appendChild(cs200Table)
+        maintenanceContainer.style.display = "block"
+        break
+      case "Wipotec OCS Scale":
+        // Create and append the OCS Scale series maintenance table
+        const wiOcsScaleTable = createMaintenanceTable("Wipotec OCS Scale", [
+          "Cleaned Scale",
+          "Scale calibrated",
+        ])
+        maintenanceContainer.appendChild(wiOcsScaleTable)
         maintenanceContainer.style.display = "block"
         break
       default:
@@ -1161,6 +1171,7 @@ document.getElementById("generate").onclick = function () {
   downloadButton.style.display = 'none';
   partButton.style.display = 'none';
   formClearButton.style.display = 'none';
+  //submitButton.style.display = 'none';
   var opt = {
     filename:     'Work_Order.pdf',
     image:        { type: 'jpeg', quality: 0.98 },
@@ -1173,5 +1184,159 @@ document.getElementById("generate").onclick = function () {
     downloadButton.style.display = 'block';
     partButton.style.display = 'block';
     formClearButton.style.display = 'block';
+    //submitButton.style.display = 'block';
   });
+
 };
+/*
+// Function to submit form data to local server
+function submitFormToServer() {
+  // Get all form field values
+  const formData = {
+    technician: document.getElementById("technician").value,
+    date: document.getElementById("date").value,
+    timeOnsite: document.getElementById("timeOnsite").value,
+    customerSite: document.getElementById("customerSite").value,
+    serialNumber: document.getElementById("textAreaSerial").innerHTML,
+    sro: document.getElementById("SRO").value,
+    cubiscanModel: document.getElementById("cubiscanmodel").value,
+    servicePerformed: document.getElementById("serviceperformed").value,
+    postcheck: document.getElementById("postcheck").value,
+    partsUsed: document.getElementById("textAreaParts").innerHTML,
+    partsReturned: document.getElementById("partsReturnDropdown").value,
+    notes: document.getElementById("textAreaNotes").innerHTML,
+    siteRepresentative: document.getElementById("siteRepresentative").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+  }
+
+  // Get maintenance data if applicable
+  if (document.getElementById("maintenanceContainer").style.display !== "none") {
+    formData.maintenanceData = collectMaintenanceData()
+  }
+
+  // Get summary of service if applicable
+  const summaryElement = document.getElementById("textAreaSumm")
+  if (summaryElement) {
+    formData.summaryOfService = summaryElement.innerHTML
+  }
+
+  // Convert signature to base64 image
+  const canvas = document.getElementById("signature-pad")
+  formData.signature = canvas.toDataURL("image/png")
+
+  // Show loading indicator
+  const submitButton = document.getElementById("submitButton")
+  if (submitButton) {
+    submitButton.disabled = true
+    submitButton.textContent = "Submitting..."
+  }
+
+  // Send data to local server
+  fetch("http://10.0.110.148:3000/api/work-orders", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok")
+      }
+      return response.json()
+    })
+    .then((data) => {
+      // Handle successful submission
+      alert("Work order submitted successfully!")
+    })
+    .catch((error) => {
+      // Handle errors
+      console.error("Error submitting form:", error)
+      alert("Error submitting form. Please check if the server is running and try again.")
+    })
+    .finally(() => {
+      // Re-enable submit button
+      if (submitButton) {
+        submitButton.disabled = false
+        submitButton.textContent = "Submit Work Order"
+      }
+    })
+}
+
+// Helper function to collect maintenance checkbox data
+function collectMaintenanceData() {
+  const maintenanceData = {}
+  const checkboxes = document.querySelectorAll('#maintenanceContainer input[type="checkbox"]')
+
+  checkboxes.forEach((checkbox) => {
+    maintenanceData[checkbox.id] = checkbox.checked
+  })
+
+  return maintenanceData
+}
+
+// Add this to your DOMContentLoaded event
+document.addEventListener("DOMContentLoaded", () => {
+  // Existing code...
+
+  // Restore signature if available
+  restoreSignature()
+
+  // Restore signature after window resize
+  window.addEventListener("resize", () => {
+    setTimeout(restoreSignature, 100) // Small delay to ensure canvas is resized first
+  })
+
+  // Add a submit button to the form
+  const buttonRow = document.querySelector(".button-row")
+  if (buttonRow) {
+    const submitButton = document.createElement("button")
+    submitButton.id = "submitButton"
+    submitButton.textContent = "Submit Work Order"
+    submitButton.style.backgroundColor = "#2563eb" // Blue color
+    buttonRow.appendChild(submitButton)
+
+    // Add event listener to the submit button
+    submitButton.addEventListener("click", (e) => {
+      e.preventDefault()
+
+      // Basic form validation
+      if (!validateForm()) {
+        return
+      }
+
+      // Submit form data
+      submitFormToServer()
+    })
+  }
+})
+
+// Basic form validation
+function validateForm() {
+  const requiredFields = [
+    { id: "technician", name: "Technician" },
+    { id: "date", name: "Date" },
+    { id: "customerSite", name: "Customer Site" },
+    { id: "cubiscanmodel", name: "Cubiscan Model" },
+    { id: "serviceperformed", name: "Service Performed" },
+  ]
+
+  let isValid = true
+  let errorMessage = "Please fill in the following required fields:\n"
+
+  requiredFields.forEach((field) => {
+    const element = document.getElementById(field.id)
+    if (!element.value || element.value === "Select") {
+      errorMessage += `- ${field.name}\n`
+      isValid = false
+    }
+  })
+
+  if (!isValid) {
+    alert(errorMessage)
+  }
+
+  return isValid
+}
+*/
