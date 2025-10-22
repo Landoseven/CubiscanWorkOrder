@@ -851,14 +851,14 @@ document.addEventListener("DOMContentLoaded", () => {
           "Software calibration",
           "Mechanical calibration",
           "Checked prox sensor height",
-          "Cleaned Cubiscan and cameras",
-          "Tigthened motor bolt and axel couplers",
+          "Cleaned Cubiscan, Cameras, Cabinet/Fan Filters",
+          "Tigthened Motor Bolt, Axel Couplers, Encoder Collar",
           "Inspected Chain Assemby",
           "Tightened linear bearings",
           "Calibrated touchscreen",
           "Checked arm alignment",
           "Checked pulley tracking",
-          "Verified measurement trigger",
+          "Verified measurement trigger and data transfer",
         ])
         maintenanceContainer.appendChild(aklTable)
         maintenanceContainer.style.display = "block"
