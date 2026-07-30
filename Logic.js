@@ -161,6 +161,8 @@ document.addEventListener("DOMContentLoaded", () => {
         break
       case "CS325_V2":
         addPartsForCS325_V2()
+      case "CS325_V3":
+        addPartsForCS325_V3()
         break  
       case "CS100":
       case "CS110":
@@ -384,7 +386,56 @@ document.addEventListener("DOMContentLoaded", () => {
       "14743 CBLASY Encoder",
       "14736 CBLASY Gate PWR",
       "16623 CBLASY Home Sensor",
-      "16152 CBLASY Sml/Lrg Gate Ribbon",
+      "16152 CBLASY Ribbon Cable Kit",
+      "14720 Glass ASY",
+      "14450 Axis Camera Kit",
+      "12700 Qbit DB",
+      "12701 Qbit EDT",
+      "12703 Qbit WEB",
+      "12708 Qbit Xfer",
+    ]
+    parts.forEach((part) => {
+      const option = document.createElement("option")
+      option.value = part
+      option.textContent = part
+      partsDropdown.appendChild(option)
+    })
+  }
+
+  function addPartsForCS325_V3() {
+    const parts = [
+      "13624 Cal Cube", 
+      "14967 Dust Cover",
+      "13411 USB to Ethernet Adapter",
+      "16924 RJ45 Ethernet Cable",
+      "11493 USB to Serial",
+      "12997 USB to Serial Adapter",
+      "10083 AC Power Cord",
+      "17217 LED Filter",
+      "13504 RX V3 Board",
+      "14507 TX V3 Board",
+      "15516 CBL ASY 2P-2P 15in",
+      "15578 CBL ASY 2P-2P 20in",
+      "13305 CBL ASY 2P-2P 31in",
+      "15517 CBL ASY CAT 5e 12in",
+      "15574 CBL ASY CAT 5e 24in",
+      "15575 CBL ASY CAT 5e 36in",
+      "17307 CTRLR ASY V3",
+      "13351 Fuse 250V 1AMP", 
+      "13476 SD Memory 16GB/32GB",
+      "17196 PWR Supply 24V",
+      "17204 CS325 V3 Display",
+      "16445 HDMI CBL",
+      "12344 Ball 1/4 DIA",
+      "16254 LDU 181.1 Summing Board",
+      "17028 Load Cell 4 50KG",
+      "16084 LDU 181.1 Scale Card",
+      "16254 LDU 181 Summing Board",
+      "14066 Leveling Foot",
+      "17193 CBLASY Encoder",
+      "17191 CBLASY Gate PWR",
+      "17195 CBLASY Home Sensor",
+      "16152 CBLASY Ribbon Cable Kit",
       "14720 Glass ASY",
       "14450 Axis Camera Kit",
       "12700 Qbit DB",
@@ -831,6 +882,7 @@ document.addEventListener("DOMContentLoaded", () => {
       case "CS125":
       case "CS325":
       case "CS325_V2":
+      case "CS325_V3":
         maintenanceContainer.appendChild(maintenanceCS25)
         maintenanceContainer.style.display = "block"
         break
